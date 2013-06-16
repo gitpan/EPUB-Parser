@@ -5,39 +5,39 @@
 # SYNOPSIS
 
     use EPUB::Parser;
-    my $ee = EPUB::Parser->newe({ epub_version => '3.0' }) #default 3.0 and current supoprt only 3.0
+    my $ep = EPUB::Parser->new;
 
-    # load epub 
-    $ee->load_file({ file_path  => 'sample.epub' });
-    # or 
-    $ee->load_binary({ data  => $binary_data }) 
+    # load epub
+    $ep->load_file({ file_path  => 'sample.epub' });
+    # or
+    $ep->load_binary({ data  => $binary_data })
 
     # get opf version
-    my $version = $extract->opf->guess_version; 
+    my $version = $ep->opf->guess_version;
 
     # get css. Return value is 'EPUB::Parser::Util::Archive::Iterator' object.
-    my $itr = $ee->opf->manifest->items_by_media_type({ regexp => qr{text/css}ix });
+    my $itr = $ep->opf->manifest->items_by_media_type({ regexp => qr{text/css}ix });
     while ( my $zip_member = $itr->next ) {
         $zip_member->data;
         $zip_member->path;
     }
 
     # shortcut method. iterator object contain image,audio,video item path.
-    my $itr = $ee->opf->manifest->items_by_media;
+    my $itr = $ep->opf->manifest->items_by_media;
 
     # get list under <nav id="toc" epub:type="toc"> 
     # todo: parse nested list
-    for my $chapter ( @{$ee->navi->toc->list} ) {
+    for my $chapter ( @{$ep->navi->toc->list} ) {
         $chapter->{title};
         $chapter->{href};
     }
 
     # get cover image blob
-    my $cover_img_path = $ee->opf->manifest->cover_image_path({ abs => 1 });
-    $ee->data_from_path($cover_img_path);
+    my $cover_img_path = $ep->opf->manifest->cover_image_path({ abs => 1 });
+    $ep->data_from_path($cover_img_path);
 
     # get page list from each chapter.
-    my $collect_pages = $ee->pages_manager->get_page_from_each_chapter;
+    my $collect_pages = $ep->pages_manager->get_page_from_each_chapter;
     #   no_chapter_member => [
     #        'OEBPS/cover.xhtml',
     #        'OEBPS/nav.xhtml'
@@ -56,15 +56,46 @@
     #        ....
     #    ]
 
-}
- 
-
-
-
 # DESCRIPTION
 
-    EPUB::Parser parse EPUB3 and return Perl Data Structure.
-    This module can only parse EPUB3.
+EPUB::Parser parse EPUB3 and return Perl Data Structure.
+This module can only parse EPUB3.
+
+# METHODS
+
+## new(\\%opts)
+
+Constructor.
+Creates a new EPUB::Parser instance. Valid options are:
+
+- epub\_version
+
+    EPUB::Parser->new({ epub\_version => '3.0' });
+    epub\_version is default 3.0 and current supoprt only 3.0.
+
+## opf
+
+Returns instance of [EPUB::Parser::File::OPF](http://search.cpan.org/perldoc?EPUB::Parser::File::OPF).
+
+## navi
+
+Returns instance of [EPUB::Parser::File::Navi](http://search.cpan.org/perldoc?EPUB::Parser::File::Navi).
+
+## data\_from\_path($path)
+
+get blob from loaded EPUB with path indicated in $path.
+
+## pages\_manager
+
+Returns instance of [EPUB::Parser::Manager::Pages](http://search.cpan.org/perldoc?EPUB::Parser::Manager::Pages).
+
+## load\_file({ file\_path  => 'sample.epub' })
+
+load from EPUB file.
+
+## load\_binary({ data  => $binary\_data })
+
+load from EPUB blob.
 
 # LICENSE
 
@@ -75,4 +106,4 @@ it under the same terms as Perl itself.
 
 # AUTHOR
 
-tokubass <tokubass@cpan.org>
+tokubass <tokubass {at} cpan.org>

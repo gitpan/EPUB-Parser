@@ -116,3 +116,86 @@ sub items_by_media_type {
 
 
 1;
+
+__END__
+
+=encoding utf-8
+
+=head1 NAME
+
+ EPUB::Parser::File::OPF::Context::Manifest - parses manifest node in opf file
+
+=head1 METHODS
+
+=head2 nav_path
+
+Get navigation file path from item element with the property 'nav'.
+
+=head2 cover_image_path
+
+Get cover image path from item element with the property 'cover-image'.
+
+=head2 attr_by_media_tyep({ regexp => qr{ ... }ix })
+
+Retrun in the following format.
+ {
+
+    'image/png' =>  [{
+        href => "cover.png", id => "_cover.png", properties => "cover-image"
+    },{
+        href => "fig01.png", id => "_fig01.png"
+    }],
+    'text/css' => [{
+        .....
+    }],
+ }
+
+=head2 attr_by_id
+
+Retrun in the following format.
+ {
+    "_cover.png"   => { "media-type" => "image/png", href => "cover.png", properties => "cover-image" },
+    "_style.css"   => { "media-type" => "text/css",  href => "style.css" },
+    "_toc.ncx"     => { "media-type" => "application/x-dtbncx+xml", href => "toc.ncx" },
+    "_cover.xhtml" => { "media-type" => "application/xhtml+xml",  href => "cover.xhtml" },
+    "_nav.xhtml"   => { "media-type" => "application/xhtml+xml",  href => "nav.xhtml", properties => "nav" },
+    ....
+ }
+
+
+=head2 items_path
+
+Returns all item path.
+
+=head2 items_path_by_media_type
+
+Returns items path with media-type specified by Regular expression.
+
+=head2 items
+
+Returns all item.
+The item is instance of L<EPUB::Parser::Util::Archive::Iterator>.
+
+=head2 items_by_media
+
+Returns items with specified media-type. image/*, video/* ,audio/* .
+The item is instance of L<EPUB::Parser::Util::Archive::Iterator>.
+
+=head2 items_by_media_type({ regexp => qr{ ... }ix })
+
+Returns items with media-type specified by Regular expression.
+The item is instance of L<EPUB::Parser::Util::Archive::Iterator>.
+
+=head1 LICENSE
+
+Copyright (C) tokubass.
+
+This library is free software; you can redistribute it and/or modify
+it under the same terms as Perl itself.
+
+=head1 AUTHOR
+
+tokubass E<lt>tokubass {at} cpan.orgE<gt>
+
+=cut
+

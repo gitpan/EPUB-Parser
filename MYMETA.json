@@ -1,10 +1,10 @@
 {
    "abstract" : "EPUB Parser class",
    "author" : [
-      "tokubass <tokubass@cpan.org>"
+      "tokubass <tokubass {at} cpan.org>"
    ],
    "dynamic_config" : 0,
-   "generated_by" : "Minilla/v0.5.3, CPAN::Meta::Converter version 2.130880",
+   "generated_by" : "Minilla/v0.5.3, CPAN::Meta::Converter version 2.131560",
    "license" : [
       "perl_5"
    ],
@@ -44,6 +44,7 @@
          "requires" : {
             "Archive::Zip" : "0",
             "Carp" : "0",
+            "File::Slurp" : "0",
             "IO::String" : "0",
             "Smart::Args" : "0",
             "URI" : "0",
@@ -62,7 +63,7 @@
    "provides" : {
       "EPUB::Parser" : {
          "file" : "lib/EPUB/Parser.pm",
-         "version" : "0.01"
+         "version" : "0.02"
       },
       "EPUB::Parser::File::Container" : {
          "file" : "lib/EPUB/Parser/File/Container.pm"
@@ -143,8 +144,9 @@
          "web" : "https://github.com/tokubass/p5-EPUB-Parser"
       }
    },
-   "version" : "0.01",
+   "version" : "0.02",
    "x_contributors" : [
-      "tokubass <tomi21110@gmail.com>"
+      "tokubass <tomi21110@gmail.com>",
+      "tokubass <tokubass@cpan.org>"
    ]
 }
