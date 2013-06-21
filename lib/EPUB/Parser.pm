@@ -9,7 +9,7 @@ use EPUB::Parser::File::OPF;
 use EPUB::Parser::File::Navi;
 use EPUB::Parser::Manager::Pages;
 
-our $VERSION = "0.02";
+our $VERSION = "0.03";
 
 
 sub new {
@@ -109,7 +109,7 @@ __END__
  }
 
  # get cover image blob
- my $cover_img_path = $ep->opf->manifest->cover_image_path({ abs => 1 });
+ my $cover_img_path = $ep->opf->cover_image_path;
  $ep->data_from_path($cover_img_path);
 
  # get page list from each chapter.

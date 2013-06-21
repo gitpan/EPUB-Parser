@@ -61,7 +61,7 @@
    "provides" : {
       "EPUB::Parser" : {
          "file" : "lib/EPUB/Parser.pm",
-         "version" : "0.02"
+         "version" : "0.03"
       },
       "EPUB::Parser::File::Container" : {
          "file" : "lib/EPUB/Parser/File/Container.pm"
@@ -141,9 +141,8 @@
          "web" : "https://github.com/tokubass/p5-EPUB-Parser"
       }
    },
-   "version" : "0.02",
+   "version" : "0.03",
    "x_contributors" : [
-      "tokubass <tomi21110@gmail.com>",
-      "tokubass <tokubass@cpan.org>"
+      "tokubass <tomi21110@gmail.com>"
    ]
 }
