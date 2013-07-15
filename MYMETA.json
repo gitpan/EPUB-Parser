@@ -4,7 +4,7 @@
       "tokubass <tokubass {at} cpan.org>"
    ],
    "dynamic_config" : 0,
-   "generated_by" : "Minilla/v0.5.3, CPAN::Meta::Converter version 2.130880",
+   "generated_by" : "Minilla/v0.5.3, CPAN::Meta::Converter version 2.120921",
    "license" : [
       "perl_5"
    ],
@@ -63,73 +63,99 @@
    "provides" : {
       "EPUB::Parser" : {
          "file" : "lib/EPUB/Parser.pm",
-         "version" : "0.03"
+         "version" : "0.04"
       },
       "EPUB::Parser::File::Container" : {
-         "file" : "lib/EPUB/Parser/File/Container.pm"
+         "file" : "lib/EPUB/Parser/File/Container.pm",
+         "version" : 0
       },
       "EPUB::Parser::File::Document" : {
-         "file" : "lib/EPUB/Parser/File/Document.pm"
+         "file" : "lib/EPUB/Parser/File/Document.pm",
+         "version" : 0
       },
       "EPUB::Parser::File::Navi" : {
-         "file" : "lib/EPUB/Parser/File/Navi.pm"
+         "file" : "lib/EPUB/Parser/File/Navi.pm",
+         "version" : 0
       },
       "EPUB::Parser::File::Navi::Context" : {
-         "file" : "lib/EPUB/Parser/File/Navi/Context.pm"
+         "file" : "lib/EPUB/Parser/File/Navi/Context.pm",
+         "version" : 0
       },
       "EPUB::Parser::File::Navi::Context::Toc" : {
-         "file" : "lib/EPUB/Parser/File/Navi/Context/Toc.pm"
+         "file" : "lib/EPUB/Parser/File/Navi/Context/Toc.pm",
+         "version" : 0
       },
       "EPUB::Parser::File::OPF" : {
-         "file" : "lib/EPUB/Parser/File/OPF.pm"
+         "file" : "lib/EPUB/Parser/File/OPF.pm",
+         "version" : 0
       },
       "EPUB::Parser::File::OPF::Context" : {
-         "file" : "lib/EPUB/Parser/File/OPF/Context.pm"
+         "file" : "lib/EPUB/Parser/File/OPF/Context.pm",
+         "version" : 0
       },
       "EPUB::Parser::File::OPF::Context::Guide" : {
-         "file" : "lib/EPUB/Parser/File/OPF/Context/Guide.pm"
+         "file" : "lib/EPUB/Parser/File/OPF/Context/Guide.pm",
+         "version" : 0
       },
       "EPUB::Parser::File::OPF::Context::Manifest" : {
-         "file" : "lib/EPUB/Parser/File/OPF/Context/Manifest.pm"
+         "file" : "lib/EPUB/Parser/File/OPF/Context/Manifest.pm",
+         "version" : 0
       },
       "EPUB::Parser::File::OPF::Context::Metadata" : {
-         "file" : "lib/EPUB/Parser/File/OPF/Context/Metadata.pm"
+         "file" : "lib/EPUB/Parser/File/OPF/Context/Metadata.pm",
+         "version" : 0
       },
       "EPUB::Parser::File::OPF::Context::Spine" : {
-         "file" : "lib/EPUB/Parser/File/OPF/Context/Spine.pm"
+         "file" : "lib/EPUB/Parser/File/OPF/Context/Spine.pm",
+         "version" : 0
       },
       "EPUB::Parser::File::Parser" : {
-         "file" : "lib/EPUB/Parser/File/Parser.pm"
+         "file" : "lib/EPUB/Parser/File/Parser.pm",
+         "version" : 0
       },
       "EPUB::Parser::File::Parser::Container" : {
-         "file" : "lib/EPUB/Parser/File/Parser/Container.pm"
+         "file" : "lib/EPUB/Parser/File/Parser/Container.pm",
+         "version" : 0
       },
       "EPUB::Parser::File::Parser::Document" : {
-         "file" : "lib/EPUB/Parser/File/Parser/Document.pm"
+         "file" : "lib/EPUB/Parser/File/Parser/Document.pm",
+         "version" : 0
       },
       "EPUB::Parser::File::Parser::Navi" : {
-         "file" : "lib/EPUB/Parser/File/Parser/Navi.pm"
+         "file" : "lib/EPUB/Parser/File/Parser/Navi.pm",
+         "version" : 0
       },
       "EPUB::Parser::File::Parser::OPF" : {
-         "file" : "lib/EPUB/Parser/File/Parser/OPF.pm"
+         "file" : "lib/EPUB/Parser/File/Parser/OPF.pm",
+         "version" : 0
       },
       "EPUB::Parser::Manager::Pages" : {
-         "file" : "lib/EPUB/Parser/Manager/Pages.pm"
+         "file" : "lib/EPUB/Parser/Manager/Pages.pm",
+         "version" : 0
       },
       "EPUB::Parser::Util::Archive" : {
-         "file" : "lib/EPUB/Parser/Util/Archive.pm"
+         "file" : "lib/EPUB/Parser/Util/Archive.pm",
+         "version" : 0
       },
       "EPUB::Parser::Util::Archive::Iterator" : {
-         "file" : "lib/EPUB/Parser/Util/Archive.pm"
+         "file" : "lib/EPUB/Parser/Util/Archive.pm",
+         "version" : 0
       },
       "EPUB::Parser::Util::AttributePacker" : {
-         "file" : "lib/EPUB/Parser/Util/AttributePacker.pm"
+         "file" : "lib/EPUB/Parser/Util/AttributePacker.pm",
+         "version" : 0
       },
       "EPUB::Parser::Util::Context" : {
-         "file" : "lib/EPUB/Parser/Util/Context.pm"
+         "file" : "lib/EPUB/Parser/Util/Context.pm",
+         "version" : 0
       },
       "EPUB::Parser::Util::EpubLoad" : {
-         "file" : "lib/EPUB/Parser/Util/EpubLoad.pm"
+         "file" : "lib/EPUB/Parser/Util/EpubLoad.pm",
+         "version" : 0
+      },
+      "EPUB::Parser::Util::ShortcutMethod" : {
+         "file" : "lib/EPUB/Parser/Util/ShortcutMethod.pm",
+         "version" : 0
       }
    },
    "release_status" : "stable",
@@ -144,7 +170,7 @@
          "web" : "https://github.com/tokubass/p5-EPUB-Parser"
       }
    },
-   "version" : "0.03",
+   "version" : "0.04",
    "x_contributors" : [
       "tokubass <tomi21110@gmail.com>"
    ]

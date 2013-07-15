@@ -8,9 +8,14 @@ use EPUB::Parser::Util::Archive;
 use EPUB::Parser::File::OPF;
 use EPUB::Parser::File::Navi;
 use EPUB::Parser::Manager::Pages;
+use EPUB::Parser::Util::ShortcutMethod qw/
+    title creator language identifier
+    items_by_media items_by_media_type
+    toc_list
+/;
 
-our $VERSION = "0.03";
 
+our $VERSION = "0.04";
 
 sub new {
     my $class = shift;
@@ -92,18 +97,18 @@ __END__
  my $version = $ep->opf->guess_version;
 
  # get css. Return value is 'EPUB::Parser::Util::Archive::Iterator' object.
- my $itr = $ep->opf->manifest->items_by_media_type({ regexp => qr{text/css}ix });
+ my $itr = $ep->items_by_media_type({ regexp => qr{text/css}ix });
  while ( my $zip_member = $itr->next ) {
      $zip_member->data;
      $zip_member->path;
  }
 
  # shortcut method. iterator object contain image,audio,video item path.
- my $itr = $ep->opf->manifest->items_by_media;
+ my $itr = $ep->items_by_media;
 
  # get list under <nav id="toc" epub:type="toc"> 
  # todo: parse nested list
- for my $chapter ( @{$ep->navi->toc->list} ) {
+ for my $chapter ( $ep->toc_list ) {
      $chapter->{title};
      $chapter->{href};
  }

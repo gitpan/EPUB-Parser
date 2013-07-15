@@ -61,7 +61,7 @@
    "provides" : {
       "EPUB::Parser" : {
          "file" : "lib/EPUB/Parser.pm",
-         "version" : "0.03"
+         "version" : "0.04"
       },
       "EPUB::Parser::File::Container" : {
          "file" : "lib/EPUB/Parser/File/Container.pm"
@@ -128,6 +128,9 @@
       },
       "EPUB::Parser::Util::EpubLoad" : {
          "file" : "lib/EPUB/Parser/Util/EpubLoad.pm"
+      },
+      "EPUB::Parser::Util::ShortcutMethod" : {
+         "file" : "lib/EPUB/Parser/Util/ShortcutMethod.pm"
       }
    },
    "release_status" : "stable",
@@ -141,7 +144,7 @@
          "web" : "https://github.com/tokubass/p5-EPUB-Parser"
       }
    },
-   "version" : "0.03",
+   "version" : "0.04",
    "x_contributors" : [
       "tokubass <tomi21110@gmail.com>"
    ]

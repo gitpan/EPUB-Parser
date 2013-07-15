@@ -4,6 +4,7 @@ LICENSE
 META.json
 MYMETA.json
 README.md
+bin/epub-parser
 cpanfile
 lib/EPUB/Parser.pm
 lib/EPUB/Parser/File/Container.pm
@@ -27,6 +28,7 @@ lib/EPUB/Parser/Util/Archive.pm
 lib/EPUB/Parser/Util/AttributePacker.pm
 lib/EPUB/Parser/Util/Context.pm
 lib/EPUB/Parser/Util/EpubLoad.pm
+lib/EPUB/Parser/Util/ShortcutMethod.pm
 t/00_compile.t
 t/archive.t
 t/base.t
@@ -39,6 +41,7 @@ t/manifest.t
 t/metadata.t
 t/navi.t
 t/opf.t
+t/shortcut_method.t
 t/spine.t
 t/var/denden_converter.epub
 META.yml
