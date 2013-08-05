@@ -27,7 +27,7 @@ no_index:
 provides:
   EPUB::Parser:
     file: lib/EPUB/Parser.pm
-    version: 0.04
+    version: 0.05
   EPUB::Parser::File::Container:
     file: lib/EPUB/Parser/File/Container.pm
     version: 0
@@ -112,6 +112,6 @@ resources:
   bugtracker: https://github.com/tokubass/p5-EPUB-Parser/issues
   homepage: https://github.com/tokubass/p5-EPUB-Parser
   repository: git://github.com/tokubass/p5-EPUB-Parser.git
-version: 0.04
+version: 0.05
 x_contributors:
   - 'tokubass <tomi21110@gmail.com>'
